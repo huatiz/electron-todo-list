@@ -108,6 +108,8 @@ watch(
     localImageUrl.value = newValue
     if (newValue) {
       previewUrl.value = newValue
+    } else {
+      previewUrl.value = ''
     }
     errorMessage.value = ''
   }
@@ -123,7 +125,7 @@ watch(
       }
       reader.readAsDataURL(newValue)
     } else {
-      previewUrl.value = props.imageUrl
+      previewUrl.value = ''
     }
     errorMessage.value = ''
   }
