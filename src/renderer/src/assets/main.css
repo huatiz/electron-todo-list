@@ -1,0 +1,24 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-white: #ffffff;
+  --color-gray: #ebebeb;
+  --color-black: #000000;
+  --color-primary-light: #e7ffe9;
+  --color-primary-medium: #a1ffc7;
+  --color-primary-dark: #81f8b1;
+}
+
+@theme inline {
+  --radius-inherit: inherit;
+}
+
+@layer components {
+  .form-input {
+    @apply px-3 py-1 rounded-[10px] bg-gray leading-10;
+  }
+
+  .btn-primary {
+    @apply w-full rounded-[10px] cursor-pointer bg-primary-light hover:bg-primary-dark disabled:bg-primary-light disabled:text-gray;
+  }
+}
